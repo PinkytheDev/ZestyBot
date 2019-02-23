@@ -14,8 +14,6 @@ BOT_PREFIX = ("~", "Z-", "_")
 
 # Variables #
 
-BOT_TOKEN = 'NTQ1NDMzODU0NTQ3MzI5MDI1.D0Zqxw.sAw1wT8gSreajyCQwyQ0y8PF-00'
-
 client = discord.Client()
 
 client = Bot(command_prefix=BOT_PREFIX)
