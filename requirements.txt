@@ -1,5 +1,3 @@
 discord
 asyncio
-Pymoe
-youtube_dl
 pip
