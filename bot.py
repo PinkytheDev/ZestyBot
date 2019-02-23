@@ -84,14 +84,7 @@ async def on_ready():
     print('The bot is ready!')
     print('Logged in as')
     print(client.user.name)
-    await client.change_presence(game=discord.Game(name='ZestyPepper | Prefix: Z- or _ '))
-
-# Kick #
-
-@client.command()
-async def Kick(context, userName: context.message.author.mention):
-    await client.kick(userName)
-    await client.say("**__User Has Been Kicked__**")
+    await client.change_presence(game=discord.Game(name='ZestyPepper | Prefix: Z-'))
 	
 # Other important crap #
     
