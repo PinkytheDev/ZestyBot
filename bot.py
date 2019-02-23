@@ -6,6 +6,7 @@ import random
 import time
 import aiohttp
 import json
+import os
 from discord.ext.commands import Bot
 
 # Prefixes #
