@@ -17,7 +17,7 @@ BOT_PREFIX = ("~", "Z", "<")
 
 # Variables #
 
-bot token: client.run(str(os.environ.get('BOT_TOKEN')))
+client.run(str(os.environ.get('BOT_TOKEN')))
 
 # Code #
 
