@@ -16,6 +16,8 @@ BOT_PREFIX = ("~", "Z-", "_")
 
 client = discord.Client()
 
+client.run(str(os.environ.get('BOT_TOKEN')))
+
 client = Bot(command_prefix=BOT_PREFIX)
 
 #	#	# Fun! #	#	#
@@ -103,4 +105,3 @@ async def list_servers():
 
 
 client.loop.create_task(list_servers())
-client.run(BOT_TOKEN)
