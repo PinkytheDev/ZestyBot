@@ -86,8 +86,8 @@ async def Shoot(context, target: discord.Member):
     possible_responses = [
         'You missed your shot!',
         'Uh oh! The fuzz have arrived!',
-        'You hit!' + target.mention,
-        'Your enemy' + target.mention + ' dies a bloody death!',
+        'You hit! ' + target.mention,
+        'Your enemy ' + target.mention + ' dies a bloody death!',
         'Ew, blood!',
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention);
@@ -102,8 +102,8 @@ async def Shoot(context, target: discord.Member):
     possible_responses = [
         'You spill their guts!',
         'Oh no, the Po-Po!',
-        'You stab!' + target.mention,
-        'Your enemy' + target.mention + ' dies a bloody death! (Lots of blood and guts)',
+        'You stab! ' + target.mention,
+        'Your enemy ' + target.mention + ' dies a bloody death! (Lots of blood and guts)',
         'Ew, blood!',
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention);
