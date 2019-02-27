@@ -76,6 +76,23 @@ async def Ping():
 	"""Pangs! :ping_pong:"""
 	await client.say("Pong! :ping_pong:")
 	
+# Shoot Command #
+
+@client.command(name='Shoot',
+                description="Shoot an enemy!",
+                brief="Shoot your enemies....",
+                pass_context=True)
+async def Shoot(context, target: discord.Member):
+    possible_responses = [
+        'You missed your shot!',
+        'Uh oh! The fuzz have arrived!',
+        'You hit!' + target.mention,
+        'Your enemy' + target.mention + ' dies a bloody death!',
+        'Ew, blood!',
+    ]
+    await client.say(random.choice(possible_responses) + ", " + context.message.author.mention);
+
+	
 # Status Message #
 
 @client.event
