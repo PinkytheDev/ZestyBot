@@ -91,6 +91,22 @@ async def Shoot(context, target: discord.Member):
         'Ew, blood!',
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention);
+	
+# Stab Command #
+
+@client.command(name='Stab',
+                description="Stab an enemy!",
+                brief="Stab your enemies....",
+                pass_context=True)
+async def Shoot(context, target: discord.Member):
+    possible_responses = [
+        'You spill their guts!',
+        'Oh no, the Po-Po!',
+        'You stab!' + target.mention,
+        'Your enemy' + target.mention + ' dies a bloody death! (Lots of blood and guts)',
+        'Ew, blood!',
+    ]
+    await client.say(random.choice(possible_responses) + ", " + context.message.author.mention);
 
 	
 # Status Message #
