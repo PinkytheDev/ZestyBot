@@ -125,8 +125,8 @@ async def kick(ctx, userName: discord.User, target: discord.Member):
 """Kick your haters"""
     await client.kick(userName)
     await client.say(target.mention, "Has been kicked!")
-else:
-   client.say("You don't have permissions :thinking:")
+	else:
+	   client.say("You don't have permissions :thinking:")
 	
 # Other important crap #
     
