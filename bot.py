@@ -118,6 +118,12 @@ async def on_ready():
     print(client.user.name)
     await client.change_presence(game=discord.Game(name='ZestyPepper | Prefix: Z-'))
 	
+# Moderation #
+
+@client.command(pass_context = True)
+async def kick(ctx, userName: discord.User):
+    await client.kick(userName)
+	
 # Other important crap #
     
 async def list_servers():
