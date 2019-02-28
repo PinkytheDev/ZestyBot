@@ -123,11 +123,11 @@ async def on_ready():
 @client.command(pass_context = True)
 async def kick(ctx, userName: discord.User,):
 		"""Kick your haters"""
-		try:
-			await client.kick(userName)
-			await client.say(userName.mention, "Has been kicked!")
-		except:
-			await client.say("You don't have permissions :thinking:")
+	try:
+	  await client.kick(userName)
+	  await client.say(userName.mention, "Has been kicked!")
+	except:
+	  await client.say("You don't have permissions :thinking:")
 	
 # Other important crap #
     
