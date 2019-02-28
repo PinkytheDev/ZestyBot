@@ -65,7 +65,7 @@ async def multiply(left : int, right : int):
 async def divide(left : int, right : int):
 	"""Divides Numbers!"""
 	try:
-		await client.say(left // right)
+	        await client.say(left // right)
 	except ZeroDivisionError:
 		await client.say("You cannot divide by 0! :thinking:")
 
@@ -124,10 +124,10 @@ async def on_ready():
 async def kick(ctx, userName: discord.User,):
 	"""Kick your haters"""
 	try:
-		await client.kick(userName)
+	        await client.kick(userName)
     		await client.say(userName.mention, "Has been kicked!")
         except:
-		client.say("You don't have permissions :thinking:")
+		await client.say("You don't have permissions :thinking:")
 	
 # Other important crap #
     
