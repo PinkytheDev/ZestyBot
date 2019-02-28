@@ -123,7 +123,7 @@ async def on_ready():
 @client.command(pass_context = True)
 async def kick(ctx, userName: discord.User, target: discord.Member):
     await client.kick(userName)
-    await client.say(target, "Has been kicked!")
+    await client.say(target.mention, "Has been kicked!")
 	
 # Other important crap #
     
