@@ -121,9 +121,9 @@ async def on_ready():
 # Moderation #
 
 @client.command(pass_context = True)
-async def kick(ctx, userName: discord.User):
+async def kick(ctx, userName: discord.User, target: discord.Member):
     await client.kick(userName)
-    await client.say(userName, "Has been kicked!")
+    await client.say(target, "Has been kicked!")
 	
 # Other important crap #
     
