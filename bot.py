@@ -140,14 +140,14 @@ async def Ban(ctx, userName: discord.User,):
 			await client.ban(userName)
 			await client.say(userName.mention, "Has been banned!")
 		except:
-			await client.say("You don't have permissions :thinking:")
-			
+			await client.say("You don't have permissions :thinking: ")
 # Unban Command #
 			
 @client.command(pass_context = True)
-async def Unban(ctx, userName: discord.User,):
+async def Unban(ctx, userName: discord.User, user_id,):
 		"""Unban your haters"""
 		try:
+			await client.get_user_info(user_id)
 			await client.unban(userName)
 			await client.say(userName.mention, "Has been Unbanned!")
 		except:
