@@ -128,7 +128,7 @@ async def Kick(ctx, UID: int):
     try:
         UID = await client.get_user_info(UID)
         await client.kick(ctx.message.server, UID)
-	await client.say("Success")
+    await client.say("Success")
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
     
@@ -142,7 +142,7 @@ async def Ban(ctx, UID: int):
     try:
         UID = await client.get_user_info(UID)
         await client.ban(ctx.message.server, UID)
-	await client.say("Success")
+    await client.say("Success")
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
    
@@ -155,7 +155,7 @@ async def Unban(ctx, UID: int):
     try:
         UID = await client.get_user_info(UID)
         await client.unban(ctx.message.server, UID)
-	await client.say("Success")
+    await client.say("Success")
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
     
@@ -168,7 +168,7 @@ async def Mute(ctx, UID: int):
     try:
         UID = await client.get_user_info(UID)
         await client.mute(ctx.message.server, UID)
-	await client.say("Success")
+    await client.say("Success")
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
     
@@ -183,7 +183,7 @@ async def Unmute(ctx, UID: int):
     try:
         UID = await client.get_user_info(UID)
         await client.unmute(ctx.message.server, UID)
-	await client.say("Success")
+    await client.say("Success")
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
   
