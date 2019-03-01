@@ -131,8 +131,7 @@ async def Kick(ctx, UID: int):
         await client.kick(ctx.message.server, UID)
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
-    excpet discord.HTTPException:
-        await client.say("try again")
+    
 
 			
 # Ban Command #
@@ -146,8 +145,7 @@ async def Ban(ctx, UID: int):
         await client.ban(ctx.message.server, UID)
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
-    excpet discord.HTTPException:
-        await client.say("try again")
+   
 
 # Unban Command 3
 
@@ -160,8 +158,7 @@ async def Unban(ctx, UID: int):
         await client.unban(ctx.message.server, UID)
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
-    excpet discord.HTTPException:
-        await client.say("try again")
+    
 
 # Mute Command #		
 
@@ -174,8 +171,7 @@ async def Mute(ctx, UID: int):
         await client.mute(ctx.message.server, UID)
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
-    excpet discord.HTTPException:
-        await client.say("try again")
+    
 
 			
 # Unmute Commane #
@@ -190,8 +186,7 @@ async def Unmute(ctx, UID: int):
         await client.unmute(ctx.message.server, UID)
     except discord.Forbidden:
         await client.say("You don't have permissions :thinking:")
-    excpet discord.HTTPException:
-        await client.say("try again")
+  
 
 # Other important crap #
     
