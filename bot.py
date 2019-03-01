@@ -122,47 +122,76 @@ async def on_ready():
 
 # Kick Command #
 
-@client.command(pass_context = True)
-async def Kick(ctx, userName: discord.User,):
-		"""Kick your haters"""
-		try:
-			await client.kick(userName)
-			await client.say(userName.mention, "Has been kicked!")
-		except:
-			await client.say("You don't have permissions :thinking:")
+@client.command(pass_context=True)
+@commands.has_permissions(kick_members=True)
+async def Kick(ctx, UID: int):
+    """Kick your haters"""
+    try:
+        UID = await client.get_user_info(UID)
+        await client.kick(ctx.message.server, UID)
+    except discord.Forbidden:
+        await client.say("You don't have permissions :thinking:")
+    excpet discord.HTTPException:
+        await client.say("try again")
+
 			
 # Ban Command #
 	
-@client.command(pass_context = True)
-async def Ban(ctx, userName: discord.User,):
-		"""Ban your haters"""
-		try:
-			await client.ban(userName)
-			await client.say(userName.mention, "Has been banned!")
-		except:
-			await client.say("You don't have permissions :thinking: ")
+@client.command(pass_context=True)
+@commands.has_permissions(ban_members=True)
+async def Ban(ctx, UID: int):
+    """Ban your haters"""
+    try:
+        UID = await client.get_user_info(UID)
+        await client.ban(ctx.message.server, UID)
+    except discord.Forbidden:
+        await client.say("You don't have permissions :thinking:")
+    excpet discord.HTTPException:
+        await client.say("try again")
+
+# Unban Command 3
+
+@client.command(pass_context=True)
+@commands.has_permissions(ban_members=True)
+async def Unban(ctx, UID: int):
+    """Unban your haters"""
+    try:
+        UID = await client.get_user_info(UID)
+        await client.unban(ctx.message.server, UID)
+    except discord.Forbidden:
+        await client.say("You don't have permissions :thinking:")
+    excpet discord.HTTPException:
+        await client.say("try again")
+
 # Mute Command #		
 
-@client.command(pass_context = True)
-async def Mute(ctx, userName: discord.User,):
-		"""Mute your haters"""
-		try:
-			await client.mute(userName)
-			await client.say(userName.mention, "Has been muted!")
-		except:
-			await client.say("You don't have permissions :thinking: ")
+@client.command(pass_context=True)
+@commands.has_permissions(mute_members=True)
+async def Mute(ctx, UID: int):
+    """Mute your haters"""
+    try:
+        UID = await client.get_user_info(UID)
+        await client.mute(ctx.message.server, UID)
+    except discord.Forbidden:
+        await client.say("You don't have permissions :thinking:")
+    excpet discord.HTTPException:
+        await client.say("try again")
+
 			
 # Unmute Commane #
 
 
-@client.command(pass_context = True)
-async def Unmute(ctx, userName: discord.User,):
-		""" Unmute your haters"""
-		try:
-			await client.unmute(userName)
-			await client.say(userName.mention, "Has been Unmuted!")
-		except:
-			await client.say("You don't have permissions :thinking: ")
+@client.command(pass_context=True)
+@commands.has_permissions(mute_members=True)
+async def Unmute(ctx, UID: int):
+    """Unmute your haters"""
+    try:
+        UID = await client.get_user_info(UID)
+        await client.unmute(ctx.message.server, UID)
+    except discord.Forbidden:
+        await client.say("You don't have permissions :thinking:")
+    excpet discord.HTTPException:
+        await client.say("try again")
 
 # Other important crap #
     
