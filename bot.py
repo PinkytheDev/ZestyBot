@@ -123,7 +123,6 @@ async def on_ready():
 # Kick Command #
 
 @client.command(pass_context=True)
-@commands.has_permissions(kick_members=True)
 async def Kick(ctx, UID: int):
     """Kick your haters"""
     try:
@@ -137,7 +136,6 @@ async def Kick(ctx, UID: int):
 # Ban Command #
 	
 @client.command(pass_context=True)
-@commands.has_permissions(ban_members=True)
 async def Ban(ctx, UID: int):
     """Ban your haters"""
     try:
@@ -150,7 +148,6 @@ async def Ban(ctx, UID: int):
 # Unban Command 3
 
 @client.command(pass_context=True)
-@commands.has_permissions(ban_members=True)
 async def Unban(ctx, UID: int):
     """Unban your haters"""
     try:
@@ -163,7 +160,6 @@ async def Unban(ctx, UID: int):
 # Mute Command #		
 
 @client.command(pass_context=True)
-@commands.has_permissions(mute_members=True)
 async def Mute(ctx, UID: int):
     """Mute your haters"""
     try:
@@ -178,7 +174,6 @@ async def Mute(ctx, UID: int):
 
 
 @client.command(pass_context=True)
-@commands.has_permissions(mute_members=True)
 async def Unmute(ctx, UID: int):
     """Unmute your haters"""
     try:
