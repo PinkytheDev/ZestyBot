@@ -151,6 +151,18 @@ async def Mute(ctx, userName: discord.User,):
 			await client.say(userName.mention, "Has been muted!")
 		except:
 			await client.say("You don't have permissions :thinking: ")
+			
+# Unmute Commane #
+
+
+@client.command(pass_context = True)
+async def Unmute(ctx, userName: discord.User,):
+		""" Unmute your haters"""
+		try:
+			await client.unmute(userName)
+			await client.say(userName.mention, "Has been Unmuted!")
+		except:
+			await client.say("You don't have permissions :thinking: ")
 
 # Other important crap #
     
