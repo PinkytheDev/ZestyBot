@@ -126,8 +126,8 @@ async def on_ready():
 async def Kick(ctx, userName: discord.User):
     """Kick a user""" 
     try:
-    await client.kick(userName)
-    await client.say("Successful!")
+       await client.kick(userName)
+       await client.say("Successful!")
     except:
        await client.say("You don't have permissions :thinking:")
     
@@ -139,8 +139,8 @@ async def Kick(ctx, userName: discord.User):
 async def Ban(ctx, userName: discord.User):
     """Ban a user""" 
     try:
-    await client.ban(userName)
-    await client.say("Successful!")
+       await client.ban(userName)
+       await client.say("Successful!")
     except:
        await client.say("You don't have permissions :thinking:")
    
@@ -151,8 +151,8 @@ async def Ban(ctx, userName: discord.User):
 async def Unban(ctx, userName: discord.User):
     """Unban a user""" 
     try:
-    await client.unban(userName)
-    await client.say("Successful!")
+       await client.unban(userName)
+       await client.say("Successful!")
     except:
         await client.say("You don't have permissions :thinking:")
   
