@@ -122,67 +122,40 @@ async def on_ready():
 
 # Kick Command #
 
-@client.command(pass_context=True)
-async def Kick(ctx, UID: int):
-    """Kick your haters"""
+@client.command(pass_context = True)
+async def Kick(ctx, userName: discord.User):
+    """Kick a user""" 
     try:
-        UID = await client.get_user_info(UID)
-        await client.kick(ctx.message.server, UID)
-    except discord.Forbidden:
-        await client.say("You don't have permissions :thinking:")
+    await client.kick(userName)
+    await client.say("Successful!")
+    except:
+       await client.say("You don't have permissions :thinking:")
     
 
 			
 # Ban Command #
 	
-@client.command(pass_context=True)
-async def Ban(ctx, UID: int):
-    """Ban your haters"""
+@client.command(pass_context = True)
+async def Ban(ctx, userName: discord.User):
+    """Ban a user""" 
     try:
-        UID = await client.get_user_info(UID)
-        await client.ban(ctx.message.server, UID)
-    except discord.Forbidden:
-        await client.say("You don't have permissions :thinking:")
+    await client.ban(userName)
+    await client.say("Successful!")
+    except:
+       await client.say("You don't have permissions :thinking:")
    
 
 # Unban Command 3
 
-@client.command(pass_context=True)
-async def Unban(ctx, UID: int):
-    """Unban your haters"""
+@client.command(pass_context = True)
+async def Unban(ctx, userName: discord.User):
+    """Unban a user""" 
     try:
-        UID = await client.get_user_info(UID)
-        await client.unban(ctx.message.server, UID)   
-    except discord.Forbidden:
-        await client.say("You don't have permissions :thinking:")
-    
-
-# Mute Command #		
-
-@client.command(pass_context=True)
-async def Mute(ctx, UID: int):
-    """Mute your haters"""
-    try:
-        UID = await client.get_user_info(UID)
-        await client.mute(ctx.message.server, UID)
-    except discord.Forbidden:
-        await client.say("You don't have permissions :thinking:")
-    
-
-			
-# Unmute Commane #
-
-
-@client.command(pass_context=True)
-async def Unmute(ctx, UID: int):
-    """Unmute your haters"""
-    try:
-        UID = await client.get_user_info(UID)
-        await client.unmute(ctx.message.server, UID)
-    except discord.Forbidden:
+    await client.unban(userName)
+    await client.say("Successful!")
+    except:
         await client.say("You don't have permissions :thinking:")
   
-
 # Other important crap #
     
 async def list_servers():
