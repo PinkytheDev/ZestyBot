@@ -7,7 +7,7 @@ import time
 import aiohttp
 import json
 import os
-from discord import commands 
+from discord.ext import commands 
 from discord.ext.commands import Bot
 
 # Prefixes #
