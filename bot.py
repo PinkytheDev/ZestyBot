@@ -160,7 +160,7 @@ async def Unban(ctx, userName: discord.User):
 # Roles #
 
 @client.command(pass_context=True)
-@commands.has_role("Bots") 
+@commands.has_role("Other bots") 
 async def addrole(ctx):
     member = ctx.message.author
     role = get(member.server.roles, name="Moderator")
