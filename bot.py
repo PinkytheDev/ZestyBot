@@ -157,15 +157,6 @@ async def Unban(ctx, userName: discord.User):
     except:
         await client.say("You don't have permissions :thinking:")
 	
-# Roles #
-
-@client.command(pass_context=True)
-@commands.has_role("Other bots") 
-async def addrole(ctx):
-    member = ctx.message.author
-    role = get(member.server.roles, name="Moderator")
-    await bot.add_roles(member, role)
-  
 # Other important crap #
     
 async def list_servers():
