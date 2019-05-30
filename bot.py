@@ -178,7 +178,7 @@ async def on_ready():
     print('The bot is ready!')
     print('Logged in as')
     print(client.user.name)
-    await client.change_presence(status=discord.Status.online, activity=discord.Game=('ZestyPepper | Prefix: Z-'))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game('ZestyPepper | Prefix: Z-'))
 	
 # # # Moderation # # #
 
